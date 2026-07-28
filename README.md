@@ -45,6 +45,3 @@ Tasks are stored as a plain Python list of dicts, held only in memory (nothing i
 | `complete_task(tasks)` | Uses `get_task_index` to pick a task, flips `done` to `True`, confirms. Warns (doesn't error) if it's already done. |
 | `remove_task(tasks)` | Uses `get_task_index` to pick a task, `.pop()`s it out, confirms what was removed. |
 | `main()` | The loop: print menu, read choice, dispatch to the matching function, repeat until "5" is chosen. |
-- **No editing.** Tasks can be added, completed, or removed, but not renamed.
-
-These were left out because the spec didn't ask for them — flagging them here in case a future version needs to extend the program.
