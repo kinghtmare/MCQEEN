@@ -1,19 +1,12 @@
 # Lightning McQueen's To-Do List
-
-TASK 3 MIA 
-
+TASK 3 MIA
 ## Running it
-
 ```bash
 python3 mcqueen_todo.py
 ```
-
 Requires Python 3. No packages to install.
-
 ## What it does
-
 On start, it greets McQueen and loops on a menu until he quits:
-
 ```
 1. Add a task
 2. View my to-do list
@@ -21,21 +14,14 @@ On start, it greets McQueen and loops on a menu until he quits:
 4. Remove a task
 5. Quit
 ```
-
-
 ## Data model
-
 Tasks are stored as a plain Python list of dicts, held only in memory (nothing is saved to disk — the list resets every time you run the program):
-
 ```python
 {"name": "Get new tires from Luigi", "done": False}
 ```
-
 - `name` — the task text as typed in.
 - `done` — `True`/`False`, flipped by the "mark as done" option.
-
 ## Function breakdown
-
 | Function | Responsibility |
 |---|---|
 | `print_menu()` | Prints the header and the 5 menu options. Pure display, no logic. |
@@ -45,3 +31,5 @@ Tasks are stored as a plain Python list of dicts, held only in memory (nothing i
 | `complete_task(tasks)` | Uses `get_task_index` to pick a task, flips `done` to `True`, confirms. Warns (doesn't error) if it's already done. |
 | `remove_task(tasks)` | Uses `get_task_index` to pick a task, `.pop()`s it out, confirms what was removed. |
 | `main()` | The loop: print menu, read choice, dispatch to the matching function, repeat until "5" is chosen. |
+## Resources learned
+- [Dictionaries — Python 3 docs](https://docs.python.org/3/tutorial/datastructures.html#dictionaries)
